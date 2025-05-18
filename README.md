@@ -31,3 +31,28 @@ Este é um chatbot em Flask integrado à API da Anthropic (Claude), desenvolvido
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repo.git
 cd nome-do-repo
+
+## Ambiente Virtual
+
+python -m venv venv
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
+
+## Instale as dependências
+
+pip install -r requirements.txt
+
+## Crie um arquivo .env com sua chave da API da Anthropic:
+
+ANTHROPIC_API_KEY=sua-chave-aqui
+
+## Inicie o Servidor Flask
+bash:
+python app.py
+
+acesse //locallhost:5000 no navegador. Deploy.
+
+
+
+
+
+
