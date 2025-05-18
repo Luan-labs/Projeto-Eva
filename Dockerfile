@@ -1,20 +1,19 @@
-# Usa uma imagem leve com Python
 FROM python:3.11-slim
 
-# Define o diretório de trabalho
-WORKDIR /app
+# Variável de ambiente para evitar prompts
+ENV PYTHONUNBUFFERED=1
 
-# Copia os arquivos do seu projeto
+WORKDIR /app
 COPY . .
 
-# Instala dependências
-RUN pip install --upgrade pip \
- && pip install -r requirements.txt
+# Instala dependências do sistema se necessário
+# RUN apt-get update && apt-get install -y build-essential
 
-RUN apt-get update && apt-get install -y build-essential
+# Instala dependências Python
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Expõe a porta 5000
-EXPOSE 5000
+# Expõe a porta usada pelo Flask
+ENV PORT=8080
 
-# Comando para rodar o Flask
+# Comando para rodar o app
 CMD ["python", "app.py"]
