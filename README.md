@@ -1,13 +1,13 @@
 # Projeto-Eva
 # Chatbot Molecular com Claude e Flask
 
-Este é um chatbot em Flask integrado à API da Anthropic (Claude), desenvolvido para responder perguntas sobre Biologia Molecular (DNA, RNA, proteínas, etc.).
+Este é um chatbot e I.A em Flask integrado à API da Anthropic (Claude), desenvolvido para responder perguntas sobre Biologia Molecular, medicamentos e processos. (DNA, RNA, proteínas, etc.).
 
 ## Funcionalidades
 
 - Interface web simples com Flask
 - Integração com a API Claude (Anthropic)
-- Respostas contextuais sobre Biologia Molecular
+- Respostas contextuais sobre Biologia Molecular, Biologia Celular
 - Fácil implantação em plataformas como Render ou Fly.io
 
 ## Tecnologias
