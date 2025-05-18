@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}Histórico de Conversas - Eve{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-light border-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Histórico de Conversas</h2>
+                    <a href="/" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-comment"></i> Voltar ao Chat
+                    </a>
+                </div>
+                
+                <div class="card-body">
+                    {% if conversations %}
+                        <div class="list-group list-group-flush bg-dark">
+                            {% for conv in conversations %}
+                                <a href="/conversation/{{ conv.id }}" class="list-group-item bg-dark text-light border-secondary">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="mb-1">{{ conv.preview }}</h5>
+                                            <small>{{ conv.message_count }} mensagens</small>
+                                        </div>
+                                        <span class="badge bg-secondary">{{ conv.date }}</span>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-history fa-3x mb-3 text-muted"></i>
+                            <p class="text-muted">Nenhuma conversa encontrada</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

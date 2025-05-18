@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}Eve{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-light border-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Eve</h2>
+                    <div>
+                        <a href="/history" class="btn btn-outline-secondary btn-sm me-2">
+                            <i class="fas fa-history"></i> Histórico
+                        </a>
+                        <button id="reset-button" class="btn btn-outline-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Reiniciar Chat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card-body p-0">
+                    <!-- Chat messages container -->
+                    <div id="chat-container" class="chat-container">
+                        <!-- Messages will be added here by JavaScript -->
+                    </div>
+                    
+                    <!-- Typing indicator -->
+                    <div id="typing-indicator" class="p-3" style="display: none;">
+                        <div class="typing-indicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <small class="text-muted ms-2">IA pensando...</small>
+                    </div>
+                    
+                    <!-- Input area -->
+                    <div class="input-container border-top border-secondary">
+                        <div class="input-group">
+                            <input type="text" id="message-input" class="form-control bg-dark text-light border-secondary" 
+                                   placeholder="Digite sua mensagem...">
+                            <button id="send-button" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Information cards -->
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-dark text-light border-secondary h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0">Sobre esta IA</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Este é um assistente de IA autônomo com habilidades básicas de conversação, recuperação de conhecimento e tomada de decisões sem dependências de APIs externas.</p>
+                            <p>Ele usa processamento de linguagem natural para entender suas perguntas e fornecer respostas úteis com base em seu banco de conhecimento interno.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-dark text-light border-secondary h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0">Perguntas de Exemplo</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush bg-dark">
+                                <li class="list-group-item bg-dark text-light border-secondary">O que é inteligência artificial?</li>
+                                <li class="list-group-item bg-dark text-light border-secondary">Como o aprendizado de máquina funciona?</li>
+                                <li class="list-group-item bg-dark text-light border-secondary">O que são redes neurais?</li>
+                                <li class="list-group-item bg-dark text-light border-secondary">Fale sobre fotossíntese</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

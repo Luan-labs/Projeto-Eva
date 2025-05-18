@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block title %}Base de Conhecimento - Eve{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card bg-dark text-light border-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Base de Conhecimento</h2>
+                    <div>
+                        <a href="/knowledge/add" class="btn btn-outline-success btn-sm me-2">
+                            <i class="fas fa-plus"></i> Adicionar
+                        </a>
+                        <a href="/knowledge/sync" class="btn btn-outline-primary btn-sm me-2">
+                            <i class="fas fa-sync"></i> Sincronizar JSON
+                        </a>
+                        <a href="/" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-comment"></i> Voltar ao Chat
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text bg-dark text-light border-secondary">
+                                <i class="fas fa-filter"></i>
+                            </span>
+                            <input type="text" id="knowledge-filter" class="form-control bg-dark text-light border-secondary" 
+                                   placeholder="Filtrar por categoria ou termo...">
+                            <button id="clear-filter" class="btn btn-outline-secondary border-secondary">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    {% if entries %}
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Pergunta</th>
+                                        <th>Categoria</th>
+                                        <th>Idioma</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for entry in entries %}
+                                        <tr class="knowledge-entry" data-category="{{ entry.category }}" data-language="{{ entry.language }}">
+                                            <td>{{ entry.question }}</td>
+                                            <td><span class="badge bg-info">{{ entry.category }}</span></td>
+                                            <td><span class="badge bg-secondary">{{ entry.language }}</span></td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="/knowledge/view/{{ entry.id }}" class="btn btn-outline-info">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                    <a href="/knowledge/edit/{{ entry.id }}" class="btn btn-outline-warning">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="/knowledge/delete/{{ entry.id }}" class="btn btn-outline-danger" 
+                                                       onclick="return confirm('Tem certeza que deseja excluir este item?')">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-database fa-3x mb-3 text-muted"></i>
+                            <p class="text-muted">Nenhum item encontrado na base de conhecimento</p>
+                            <a href="/knowledge/sync" class="btn btn-primary mt-2">
+                                <i class="fas fa-sync"></i> Sincronizar com arquivo JSON
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterInput = document.getElementById('knowledge-filter');
+        const clearFilterBtn = document.getElementById('clear-filter');
+        const entries = document.querySelectorAll('.knowledge-entry');
+        
+        filterInput.addEventListener('input', function() {
+            const filterText = this.value.toLowerCase();
+            
+            entries.forEach(entry => {
+                const category = entry.getAttribute('data-category').toLowerCase();
+                const language = entry.getAttribute('data-language').toLowerCase();
+                const question = entry.querySelector('td:first-child').textContent.toLowerCase();
+                
+                if (category.includes(filterText) || 
+                    language.includes(filterText) || 
+                    question.includes(filterText)) {
+                    entry.style.display = '';
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+        });
+        
+        clearFilterBtn.addEventListener('click', function() {
+            filterInput.value = '';
+            entries.forEach(entry => {
+                entry.style.display = '';
+            });
+        });
+    });
+</script>
+{% endblock %}

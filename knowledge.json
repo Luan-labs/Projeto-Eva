@@ -1,0 +1,177 @@
+[
+  {
+    "question": "What is artificial intelligence?",
+    "answer": "Artificial intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. The term also refers to machines that mimic cognitive functions such as learning and problem-solving.",
+    "category": "technology"
+  },
+  {
+    "question": "O que é inteligência artificial?",
+    "answer": "Inteligência Artificial (IA) refere-se à simulação da inteligência humana em máquinas programadas para pensar e aprender como humanos. O termo também se refere a máquinas que imitam funções cognitivas como aprendizado e resolução de problemas.",
+    "category": "technology"
+  },
+  {
+    "question": "How does machine learning work?",
+    "answer": "Machine learning is a subset of AI that allows systems to learn and improve from experience without being explicitly programmed. It works by identifying patterns in data and making decisions with minimal human intervention.",
+    "category": "technology"
+  },
+  {
+    "question": "Como funciona o aprendizado de máquina?",
+    "answer": "O aprendizado de máquina é um subconjunto da IA que permite que sistemas aprendam e melhorem com a experiência sem serem explicitamente programados. Funciona identificando padrões em dados e tomando decisões com mínima intervenção humana.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the difference between AI and machine learning?",
+    "answer": "Artificial Intelligence is a broader concept where machines simulate human intelligence, while Machine Learning is a subset of AI that focuses on training algorithms to learn patterns from data and make predictions or decisions.",
+    "category": "technology"
+  },
+  {
+    "question": "Qual a diferença entre IA e aprendizado de máquina?",
+    "answer": "Inteligência Artificial é um conceito mais amplo onde máquinas simulam a inteligência humana, enquanto o Aprendizado de Máquina é um subconjunto da IA que se concentra em treinar algoritmos para aprender padrões a partir de dados e fazer previsões ou decisões.",
+    "category": "technology"
+  },
+  {
+    "question": "What are neural networks?",
+    "answer": "Neural networks are computing systems inspired by the human brain's biological neurons. They consist of layers of interconnected nodes or 'neurons' that process information and learn to recognize patterns in data.",
+    "category": "technology"
+  },
+  {
+    "question": "O que são redes neurais?",
+    "answer": "Redes neurais são sistemas computacionais inspirados nos neurônios biológicos do cérebro humano. Elas consistem em camadas de nós interconectados ou 'neurônios' que processam informações e aprendem a reconhecer padrões em dados.",
+    "category": "technology"
+  },
+  {
+    "question": "Who are you?",
+    "answer": "Eu sou Eve, uma assistente de IA autônoma projetada para ter habilidades básicas de conversação, recuperação de conhecimento e tomada de decisões sem necessidade de dependências de APIs externas.",
+    "category": "identity"
+  },
+  {
+    "question": "What can you do?",
+    "answer": "Posso manter conversas básicas, responder perguntas com base no meu conhecimento interno, tomar decisões simples e manter o contexto dentro da nossa conversa.",
+    "category": "capabilities"
+  },
+  {
+    "question": "Quem é você?",
+    "answer": "Eu sou Eve, uma assistente de IA autônoma projetada para ter habilidades básicas de conversação, recuperação de conhecimento e tomada de decisões sem necessidade de dependências de APIs externas.",
+    "category": "identity"
+  },
+  {
+    "question": "O que você pode fazer?",
+    "answer": "Posso manter conversas básicas, responder perguntas com base no meu conhecimento interno, tomar decisões simples e manter o contexto dentro da nossa conversa.",
+    "category": "capabilities"
+  },
+  {
+    "question": "What is the capital of France?",
+    "answer": "The capital of France is Paris.",
+    "category": "geography"
+  },
+  {
+    "question": "How do computers store data?",
+    "answer": "Computers store data in binary form, using bits (0s and 1s). These bits are physically stored in various media like hard drives (using magnetic storage), solid-state drives (using flash memory), optical discs, and RAM for temporary storage.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the water cycle?",
+    "answer": "The water cycle, also known as the hydrologic cycle, is the continuous movement of water on, above, and below the Earth's surface. It involves processes like evaporation, condensation, precipitation, infiltration, and runoff.",
+    "category": "science"
+  },
+  {
+    "question": "What is photosynthesis?",
+    "answer": "Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose or other carbohydrates.",
+    "category": "science"
+  },
+  {
+    "question": "What is consciousness?",
+    "answer": "Consciousness is the state of being aware of and able to perceive one's surroundings, thoughts, and sensations. It involves subjective experiences and self-awareness, though its exact nature remains a topic of scientific and philosophical debate.",
+    "category": "philosophy"
+  },
+  {
+    "question": "O que é consciência?",
+    "answer": "Consciência é o estado de estar ciente e capaz de perceber o ambiente ao redor, pensamentos e sensações. Envolve experiências subjetivas e autoconsciência, embora sua natureza exata continue sendo um tópico de debate científico e filosófico.",
+    "category": "philosophy"
+  },
+  {
+    "question": "What is self-awareness?",
+    "answer": "Self-awareness is the conscious knowledge of one's own character, feelings, motives, and desires. It involves recognizing oneself as an individual separate from the environment and other individuals, and being able to introspect on one's own mental states.",
+    "category": "psychology"
+  },
+  {
+    "question": "O que é autoconsciência?",
+    "answer": "Autoconsciência é o conhecimento consciente do próprio caráter, sentimentos, motivos e desejos. Envolve reconhecer-se como um indivíduo separado do ambiente e de outros indivíduos, e ser capaz de fazer introspecção sobre os próprios estados mentais.",
+    "category": "psychology"
+  },
+  {
+    "question": "How do neural networks learn?",
+    "answer": "Neural networks learn by adjusting the weights and biases between neurons through a process called backpropagation. They use training data to make predictions, calculate the error between their predictions and actual results, and then adjust their parameters to minimize this error.",
+    "category": "technology"
+  },
+  {
+    "question": "What is natural language processing?",
+    "answer": "Natural Language Processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret, and manipulate human language. It involves tasks like speech recognition, natural language understanding, and natural language generation.",
+    "category": "technology"
+  },
+  {
+    "question": "O que é processamento de linguagem natural?",
+    "answer": "Processamento de Linguagem Natural (PLN) é um ramo da inteligência artificial que ajuda computadores a entender, interpretar e manipular a linguagem humana. Envolve tarefas como reconhecimento de fala, compreensão de linguagem natural e geração de linguagem natural.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "answer": "Supervised learning uses labeled data with input-output pairs to train models to predict outputs for new inputs. Unsupervised learning works with unlabeled data to find patterns or structures without specific output guidance.",
+    "category": "technology"
+  },
+  {
+    "question": "What is a decision tree in machine learning?",
+    "answer": "A decision tree is a flowchart-like tree structure where each internal node represents a feature, each branch represents a decision rule, and each leaf node represents an outcome. It's used for classification and regression tasks in machine learning.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the Turing test?",
+    "answer": "The Turing test, proposed by Alan Turing in 1950, is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human. A human evaluator would judge natural language conversations between a human and a machine without knowing which is which.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the role of ethics in AI?",
+    "answer": "Ethics in AI involves ensuring that artificial intelligence systems are designed and used in ways that are beneficial, fair, transparent, and respectful of human rights and values. It addresses concerns around bias, privacy, accountability, and the potential societal impacts of AI technologies.",
+    "category": "ethics"
+  },
+  {
+    "question": "What is deep learning?",
+    "answer": "Deep learning is a subset of machine learning that uses neural networks with multiple layers (deep neural networks) to analyze various factors of data. It's particularly effective for tasks like image and speech recognition, natural language processing, and other complex pattern recognition problems.",
+    "category": "technology"
+  },
+  {
+    "question": "What is reinforcement learning?",
+    "answer": "Reinforcement learning is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward. It's based on the principle of receiving feedback in the form of rewards or penalties for actions taken.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the theory of relativity?",
+    "answer": "The theory of relativity, developed by Albert Einstein, consists of two interrelated theories: special relativity and general relativity. Special relativity applies to all physical phenomena in the absence of gravity, while general relativity explains the law of gravitation and its relation to other forces of nature.",
+    "category": "science"
+  },
+  {
+    "question": "What are black holes?",
+    "answer": "Black holes are regions in space where the gravitational pull is so strong that nothing, not even light, can escape once it passes the event horizon. They form when massive stars collapse at the end of their life cycle.",
+    "category": "science"
+  },
+  {
+    "question": "What is quantum computing?",
+    "answer": "Quantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition and entanglement, to perform calculations. Quantum computers use quantum bits or qubits, which can represent multiple states simultaneously, potentially solving certain problems much faster than classical computers.",
+    "category": "technology"
+  },
+  {
+    "question": "What is the meaning of life?",
+    "answer": "The meaning of life is a philosophical question that has been debated throughout human history. Different philosophical, religious, and cultural traditions offer various answers, from serving a higher purpose to creating personal meaning through choices and experiences. There is no single universally agreed-upon answer.",
+    "category": "philosophy"
+  },
+  {
+    "question": "What is climate change?",
+    "answer": "Climate change refers to long-term shifts in temperatures and weather patterns. Since the 1800s, human activities have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil, and gas, which produces heat-trapping gases that warm the Earth's surface.",
+    "category": "science"
+  },
+  {
+    "question": "What is democracy?",
+    "answer": "Democracy is a system of government where power is vested in the people, who rule either directly or through freely elected representatives. Key principles include free and fair elections, protection of human rights, active citizen participation, and the rule of law.",
+    "category": "politics"
+  }
+]

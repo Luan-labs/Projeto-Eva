@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ entry.question }} - Base de Conhecimento - Eve{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-light border-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Visualizar Conhecimento</h2>
+                    <div>
+                        <a href="/knowledge/edit/{{ entry.id }}" class="btn btn-outline-warning btn-sm me-2">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                        <a href="/knowledge" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-arrow-left"></i> Voltar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="text-info">{{ entry.question }}</h3>
+                            <div>
+                                <span class="badge bg-info me-2">{{ entry.category }}</span>
+                                <span class="badge bg-secondary">{{ entry.language }}</span>
+                            </div>
+                        </div>
+                        <div class="border-top border-secondary pt-3">
+                            <h4 class="mb-3 text-light">Resposta:</h4>
+                            <div class="p-3 bg-dark text-light rounded border border-secondary">
+                                {{ entry.answer|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-muted small mt-4">
+                        <div class="d-flex justify-content-between">
+                            <span>Criado em: {{ entry.created_at.strftime('%d/%m/%Y %H:%M') }}</span>
+                            {% if entry.updated_at != entry.created_at %}
+                                <span>Atualizado em: {{ entry.updated_at.strftime('%d/%m/%Y %H:%M') }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

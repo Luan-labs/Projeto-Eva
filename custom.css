@@ -1,0 +1,80 @@
+/* Additional custom styles for the AI assistant */
+
+/* Chat container styling */
+.chat-container {
+    height: 60vh;
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+/* Message styling */
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: var(--bs-primary);
+    color: white;
+    margin-left: auto;
+    border-top-right-radius: 0.25rem;
+}
+
+.ai-message {
+    background-color: var(--bs-secondary);
+    color: white;
+    margin-right: auto;
+    border-top-left-radius: 0.25rem;
+}
+
+/* Input area styling */
+.input-container {
+    padding: 1rem;
+    background-color: var(--bs-dark);
+    border-radius: 0.5rem;
+}
+
+/* Typing indicator animation */
+.typing-indicator {
+    display: inline-block;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-light);
+    border-radius: 50%;
+    margin: 0 2px;
+    opacity: 0.6;
+    animation: typing 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .message {
+        max-width: 90%;
+    }
+}
